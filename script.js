@@ -1,9 +1,31 @@
-let number_1 = prompt('Enter first number: ');
-let number_2 = prompt('Enter second number: ');
+const arr = [23, 'day', false, 5, 13, 'green', 58, null, 82, 1];
 
-let sum = Number(number_1) + Number(number_2);
-let subtraction = Number(number_1) - Number(number_2);
-let multiplication = Number(number_1) * Number(number_2);
-let division = Number(number_1) / Number(number_2);
+let min = Infinity;
+let max = -Infinity;
 
-alert('The sum of your numbers is: ' + sum + '; the subtraction of your numbers is: ' + subtraction + '; the multiplication of your numbers is: ' + multiplication + '; the division of your numbers is: ' + division);
+for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === "number" && !isNaN(arr[i])) {
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+}
+
+console.log(min);
+console.log(max);
+
+
+// Написати скрипт який виведе наступне:
+const rowLength = 5;
+
+for (let i = 1; i <= rows; i++) {
+    let pattern = "";
+    for (let j = 1; j <= i; j++) {
+        pattern += "#";
+    }
+    console.log(pattern);
+}
+
