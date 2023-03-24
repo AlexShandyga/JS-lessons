@@ -1,31 +1,70 @@
-const arr = [23, 'day', false, 5, 13, 'green', 58, null, 82, 1];
+function findMinMax(numbers) {
+    let min = numbers[0];
+    let max = numbers[0];
 
-let min = Infinity;
-let max = -Infinity;
+    for (let i = 1; i < numbers.length; i++) {
+        if (numbers[i] < min) {
+            min = numbers[i];
+        }
+        if (numbers[i] > max) {
+            max = numbers[i];
+        }
+    }
+    return `the min number is ${min} and max number is ${max}`;
+}
+const arr = [23, 5, 13, 58, 82, 1];
+const maxNumber = findMinMax(arr);
+alert(maxNumber);
 
-for (let i = 0; i < arr.length; i++) {
-    if (typeof arr[i] === "number" && !isNaN(arr[i])) {
-        if (arr[i] < min) {
-            min = arr[i];
-        }
-        if (arr[i] > max) {
-            max = arr[i];
-        }
+
+
+let number_1 = prompt('Enter first number: ');
+let number_2 = prompt('Enter second number: ');
+
+number_1 = Number(number_1);
+number_2 = Number(number_2);
+
+function subtraction(num1, num2) {
+    if (typeof num1 === "number" && typeof num2 === "number") {
+        alert(num1 - num2);
+    } else {
+        alert("One of your parameters is not a number");
     }
 }
 
-console.log(min);
-console.log(max);
+subtraction(number_1, number_2);
 
 
-// Написати скрипт який виведе наступне:
-const rowLength = 5;
 
-for (let i = 1; i <= rows; i++) {
-    let pattern = "";
-    for (let j = 1; j <= i; j++) {
-        pattern += "#";
+function sum(num1, num2) {
+
+    if (typeof num1 === "number" && typeof num2 === "number") {
+        alert(num1 + num2);
+    } else {
+        alert("One of your parameters is not a number");
     }
-    console.log(pattern);
 }
+sum(number_1, number_2);
+
+function multiplication(num1, num2) {
+
+    if (typeof num1 === "number" && typeof num2 === "number") {
+        alert(num1 * num2);
+    } else {
+        alert("One of your parameters is not a number");
+    }
+}
+multiplication(number_1, number_2);
+
+function division(num1, num2) {
+
+    if (typeof num1 === "number" && typeof num2 === "number") {
+        alert(num1 / num2);
+    } else {
+        alert("One of your parameters is not a number");
+    }
+}
+division(number_1, number_2);
+
+
 
