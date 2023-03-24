@@ -13,8 +13,8 @@ function findMinMax(numbers) {
     return `the min number is ${min} and max number is ${max}`;
 }
 const arr = [23, 5, 13, 58, 82, 1];
-const maxNumber = findMinMax(arr);
-alert(maxNumber);
+const minMaxNumber = findMinMax(arr);
+alert(minMaxNumber);
 
 
 
