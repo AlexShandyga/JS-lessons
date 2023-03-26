@@ -1,70 +1,31 @@
-function findMinMax(numbers) {
-    let min = numbers[0];
-    let max = numbers[0];
-
-    for (let i = 1; i < numbers.length; i++) {
-        if (numbers[i] < min) {
-            min = numbers[i];
-        }
-        if (numbers[i] > max) {
-            max = numbers[i];
-        }
+function isObjectEmpty(obj) {
+    if (Object.keys(obj).length === 0) {
+        console.log('Object is empty');
     }
-    return `the min number is ${min} and max number is ${max}`;
-}
-const arr = [23, 5, 13, 58, 82, 1];
-const minMaxNumber = findMinMax(arr);
-alert(minMaxNumber);
+    else return 'Object is not empty'
+};
 
-
-
-let number_1 = prompt('Enter first number: ');
-let number_2 = prompt('Enter second number: ');
-
-number_1 = Number(number_1);
-number_2 = Number(number_2);
-
-function subtraction(num1, num2) {
-    if (typeof num1 === "number" && typeof num2 === "number") {
-        alert(num1 - num2);
-    } else {
-        alert("One of your parameters is not a number");
+const user = {
+    name: 'Alex',
+    age: 33,
+    sayHello() {
+        console.log(`Hello, my name is ${this.name}, I'm ${this.age} years old.`)
     }
-}
-
-subtraction(number_1, number_2);
+};
 
 
 
-function sum(num1, num2) {
-
-    if (typeof num1 === "number" && typeof num2 === "number") {
-        alert(num1 + num2);
-    } else {
-        alert("One of your parameters is not a number");
+let Calculator = {
+    num1: 0,
+    num2: 0,
+    ask() {
+        this.num1 = +prompt('Enter first digit: ');
+        this.num2 = +prompt('Enter second digit: ');
+    },
+    sum() {
+        return this.num1 + this.num2;
+    },
+    mul() {
+        return this.num1 * this.num2;
     }
-}
-sum(number_1, number_2);
-
-function multiplication(num1, num2) {
-
-    if (typeof num1 === "number" && typeof num2 === "number") {
-        alert(num1 * num2);
-    } else {
-        alert("One of your parameters is not a number");
-    }
-}
-multiplication(number_1, number_2);
-
-function division(num1, num2) {
-
-    if (typeof num1 === "number" && typeof num2 === "number") {
-        alert(num1 / num2);
-    } else {
-        alert("One of your parameters is not a number");
-    }
-}
-division(number_1, number_2);
-
-
-
+};
