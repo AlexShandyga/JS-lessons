@@ -1,9 +1,42 @@
-let number_1 = prompt('Enter first number: ');
-let number_2 = prompt('Enter second number: ');
+// 1
+function calculateAverage(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
 
-let sum = Number(number_1) + Number(number_2);
-let subtraction = Number(number_1) - Number(number_2);
-let multiplication = Number(number_1) * Number(number_2);
-let division = Number(number_1) / Number(number_2);
+    let avg = sum / arr.length;
+    return avg;
+}
 
-alert('The sum of your numbers is: ' + sum + '; the subtraction of your numbers is: ' + subtraction + '; the multiplication of your numbers is: ' + multiplication + '; the division of your numbers is: ' + division);
+let numbers = [1, 2, 3, 4, 5];
+
+let avg = calculateAverage(numbers);
+console.log("The average is: " + avg); // має бути 3
+
+
+// 2
+
+function User(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+User.prototype.sayHello = function () {
+    return `Hi. My name is ${this.name} and I'm ${this.age} years old`;
+}
+
+const user = new User('Sherlock', 27);
+console.log(user.sayHello());
+
+// 3
+const calculator = function () {
+    let init = 1;
+    return function () {
+        return init++;
+    }
+}
+const c = calculator();
+console.log(c()); // має вивести 1
+console.log(c()); // має вивести 2
+
