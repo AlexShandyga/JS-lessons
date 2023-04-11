@@ -28,6 +28,7 @@ User.prototype.sayHello = function () {
 
 const user = new User('Sherlock', 27);
 console.log(user.sayHello());
+// має вивести "Hi. My name is Sherlock and I'm 27 years old"
 
 // 3
 const calculator = function () {
