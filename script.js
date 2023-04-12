@@ -61,7 +61,7 @@ let acc = new CancelableAccumulator(4);
 console.log(acc.increment());
 console.log(acc.decrement());
 console.log(acc.decrement());
-acc.clear()
+console.log(acc.clear());
 console.log(acc.number);
 
 // homework 28
