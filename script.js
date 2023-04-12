@@ -2,6 +2,7 @@ const arr = [23, 'day', false, 5, 13, 'green', 58, null, 82, 1];
 
 let min = Infinity;
 let max = -Infinity;
+let sum = 0;
 
 for (let i = 0; i < arr.length; i++) {
     if (typeof arr[i] === "number" && !isNaN(arr[i])) {
@@ -11,21 +12,22 @@ for (let i = 0; i < arr.length; i++) {
         if (arr[i] > max) {
             max = arr[i];
         }
+        if (arr[i]) {
+            sum += arr[i];
+        }
     }
 }
 
 console.log(min);
 console.log(max);
+console.log(sum);
 
 
 // Написати скрипт який виведе наступне:
 const rowLength = 5;
-
-for (let i = 1; i <= rows; i++) {
-    let pattern = "";
-    for (let j = 1; j <= i; j++) {
-        pattern += "#";
-    }
+let pattern = '';
+for (let i = 1; i <= rowLength; i++) {
+    pattern += "#";
     console.log(pattern);
 }
 
