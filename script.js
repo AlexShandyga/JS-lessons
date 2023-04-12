@@ -63,19 +63,23 @@ division(number_1, number_2);
 
 //2. Зробити функції для пошуку мінімального і максимального числа в масиві. Масив має бути аргументом функції. Для пошуку мінімального та максимального чисел використовуйте різні цикли.
 
-const arr = [23, 5, 13, 58, 82, 1];
+const arr = [23, 'day', false, 5, 13, 'green', 58, null, 82, 1];
 
 //функція для пошуку МІНІМАЛЬНОГО числа в масиві
 
 function findMin(numbers) {
     let min = numbers[0];
+
     for (let i = 0; i < numbers.length; i++) {
-        if (numbers[i] < min) {
-            min = numbers[i];
-        }
-    }
+        if (typeof arr[i] === "number") {
+            if (numbers[i] < min) {
+                min = numbers[i];
+            };
+        };
+    };
     return `the min number is ${min}`;
 };
+
 
 
 //функція для пошуку МАКСИМАЛЬНОГО числа в масиві
@@ -85,9 +89,12 @@ function findMax(numbers) {
     let i = 0;
     while (i < numbers.length) {
         i++;
-        if (numbers[i] > max) {
-            max = numbers[i];
-        }
+        if (typeof arr[i] === "number") {
+            if (numbers[i] > max) {
+                max = numbers[i];
+            }
+        };
     };
     return `the max number is ${max}`;
 };
+
