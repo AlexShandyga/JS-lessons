@@ -1,43 +1,36 @@
-// 1
-function calculateAverage(arr) {
-    let sum = 0;
-    for (let i = 0; i < arr.length; i++) {
-        sum += arr[i];
-    }
+// homework 23
 
-    let avg = sum / arr.length;
-    return avg;
-}
+const arr = [23, 'day', false, 5, 13, 'green', 58, null, 82, 1];
 
-let numbers = [1, 2, 3, 4, 5];
+let min = Infinity;
+let max = -Infinity;
+let sum = 0;
 
-let avg = calculateAverage(numbers);
-console.log("The average is: " + avg); // має бути 3
-
-
-// 2
-
-function User(name, age) {
-    this.name = name;
-    this.age = age;
-}
-
-User.prototype.sayHello = function () {
-    return `Hi. My name is ${this.name} and I'm ${this.age} years old`;
-}
-
-const user = new User('Sherlock', 27);
-console.log(user.sayHello());
-// має вивести "Hi. My name is Sherlock and I'm 27 years old"
-
-// 3
-const calculator = function () {
-    let init = 1;
-    return function () {
-        return init++;
+for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === "number") {
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+        if (arr[i]) {
+            sum += arr[i];
+        }
     }
 }
-const c = calculator();
-console.log(c()); // має вивести 1
-console.log(c()); // має вивести 2
+console.log(min);
+console.log(max);
+console.log(sum);
+
+
+
+const rowLength = 5;
+let pattern = '';
+for (let i = 1; i <= rowLength; i++) {
+    pattern += '#';
+    console.log(pattern);
+}
+
+
 
